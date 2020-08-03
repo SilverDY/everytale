@@ -99,11 +99,11 @@ const FirtsStep: React.FC<IFirstStep> = ({ nextStep, submitForm }) => {
                     control={control}
                     rules={{
                         required: 'Password is required',
-                        // pattern: {
-                        //     value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$/gm,
-                        //     message:
-                        //         'Minimum of 8 characters and must contain at least 1 uppercase and lowercase letters and 1 number', // <p>error message</p>
-                        // },
+                        pattern: {
+                            value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$/gm,
+                            message:
+                                'Minimum of 8 characters and must contain at least 1 uppercase and lowercase letters and 1 number', // <p>error message</p>
+                        },
                     }}
                     error={!!errors.password}
                     helperText={errors.password?.message}
